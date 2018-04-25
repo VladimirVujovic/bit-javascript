@@ -97,7 +97,7 @@ console.log(min, index);
 
 // zadatak 4
 
-var a = [4, 2, 8, 9, 6]
+var a = [4, 2, 8, 9, 6];
 var min = a[0];
 var sec;
 
@@ -119,3 +119,82 @@ for (var i = 1; i < a.length; i++) {
 
 console.log(sec);
 
+// fifth exercise
+
+var a = [3, 11, -5, -3, 2];
+var sum = 0;
+for (i = 0; i < a.length; i++) {
+    if (a[i] > 0) {
+        sum = sum + a[i]
+    }
+}
+console.log(sum)
+
+
+//  sixth exercise
+
+var a = [2, 4, -2, 7, -2, 4, 2];
+var isSymmetric = true;
+
+for (i = 0, j = a.length - 1; i < a.length, j > 0; i++ , j--) {
+    if (a[i] !== a[j]) {
+        isSymmetric = false;
+    }
+}
+
+console.log(isSymmetric);
+
+
+
+// seventh exercise 
+
+var a = [4, 5, 6, 2];
+var b = [3, 8, 11, 9];
+var c = [];
+
+for (var i = 0, j = 0; i < a.length; i++) {
+    c[j++] = a[i];
+    c[j++] = b[i];
+}
+
+console.log(c)
+
+
+// eight exercise
+
+var a = [4, 5, 6, 2];
+var b = [3, 8, 11, 9];
+var c = [];
+
+for (var i = 0, j = 0; i < a.length; i++ , j++) {
+    c[j] = a[i];
+    c[j + a.length] = b[i]
+}
+
+console.log(c)
+
+
+//  nineth exercise
+
+var a = [4, 6, 2, 8, 2, 2];
+var e = 2;
+var b = [];
+
+for (var i = 0, j = 0; i < a.length; i++) {
+    if (a[i] != e) {
+        b[j] = a[i];
+        j++;
+    }
+}
+console.log(b)
+
+
+
+// tenth exercise
+
+var a = [2, -2, 33, 12, 5, 8];
+var e = 78;
+var p = 3;
+var b = [];
+
+for ()
