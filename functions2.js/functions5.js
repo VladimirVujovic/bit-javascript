@@ -1,13 +1,17 @@
 var a = "My random string";
-var b = "r";
-function firstLetter(a, b) {
-    for (var i = 0; i < a; i++) {
-        if (a[i] === b) {
-            c = i;
-        } return c
+var b = "x";
 
+function firstLetter(a, b) {
+    for (var i = 0; i < a.length; i++) {
+        if (a[i] === b) {
+            return i + 1;
+        }
     }
-} result = firstLetter(a, b);
-var c;
-console.log(c);
+
+    return -1;
+}
+
+var result = firstLetter(a, b);
+
+console.log(result);
 
