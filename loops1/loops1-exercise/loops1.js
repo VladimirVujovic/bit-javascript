@@ -1,0 +1,14 @@
+for (var i = 0; i < 11; i++) {
+    console.log(i * i);
+}
+
+
+
+for (var i = 0; i < 16; i++) {
+    if (i % 2 === 0) {
+        console.log(i, "is even");
+    } else {
+        console.log(i, "is odd")
+    }
+
+}

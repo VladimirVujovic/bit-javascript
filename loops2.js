@@ -13,7 +13,7 @@ var a = [1, 2, 6, 5, 11];
 var b = [];
 var i;
 var j;
-for (i = a.length - 1, j = 0; i >= 0 && j < a.length; i-- , j++) {
+for (i = a.length - 1, j = 0; i >= 0 && j < a.length; i--, j++) {
     b[j] = a[i];
 }
 console.log(b);
@@ -136,7 +136,7 @@ console.log(sum)
 var a = [2, 4, -2, 7, -2, 4, 2];
 var isSymmetric = true;
 
-for (i = 0, j = a.length - 1; i < a.length, j > 0; i++ , j--) {
+for (i = 0, j = a.length - 1; i < a.length, j > 0; i++, j--) {
     if (a[i] !== a[j]) {
         isSymmetric = false;
     }
@@ -166,7 +166,7 @@ var a = [4, 5, 6, 2];
 var b = [3, 8, 11, 9];
 var c = [];
 
-for (var i = 0, j = 0; i < a.length; i++ , j++) {
+for (var i = 0, j = 0; i < a.length; i++, j++) {
     c[j] = a[i];
     c[j + a.length] = b[i]
 }

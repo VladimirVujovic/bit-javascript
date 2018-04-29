@@ -1,5 +1,5 @@
 var e = 3,
-var a = [7, 8, 9, 3, 1, 2, 22, 5];
+    var a = [7, 8, 9, 3, 1, 2, 22, 5];
 
 var i = o;
 var ind = false;
@@ -29,7 +29,6 @@ for (i = 0; i < 5; i++) {
 }
 
 
-
 var i = 0;
 
 do {
@@ -39,6 +38,10 @@ do {
 } while (i < 5);
 
 
+var i = 0;
+for (i = 0; i < 5; i++) {
+    console.log(i);
+}
 
 
 
@@ -51,9 +54,24 @@ do {
     if (a[i] % 2 == 0 && i % 2 == 1) {
         sum = sum + a[i];
     }
-    
+
     i++;
 } while (i < a.length);
 
 
 console.log(sum)
+
+
+
+
+
+var a = [0, 5, 6, 8, 5, 4, 10, 5];
+var sum = 0;
+
+for (var i = 0; i < a.length; i++) {
+
+    if (a[i] % 2 === 0 && i % 2 === 1) {
+        sum = sum + a[i];
+    }
+}
+console.log(sum);

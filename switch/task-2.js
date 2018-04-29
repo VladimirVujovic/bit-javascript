@@ -1,6 +1,6 @@
-var day = 5;
+var day = 2;
 
-switch(day){
+switch (day) {
     case 1:
         console.log("Monday");
         break;
