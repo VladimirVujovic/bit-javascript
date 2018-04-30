@@ -1,19 +1,18 @@
-function sumofodds(arr) {
-    var sum = 0
-
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 === 1) {
-            sum = sum + arr[i]
+function numOfApp(str, char) {
+    num = 0
+    numOfass = 0 // :D  anyways this is other part of task
+    for (var i = 0; i < str.length; i++) {
+        if (str[i] === char) {
+            num++
+        } else if (str[i] === 'a') {
+            numOfass++
+        } else if (str[i] === "A") {
+            numOfass++
         }
     }
-
-    return sum
-
+    return numOfass
 }
-testArr = [3, 4, 77, 100, 150, 9, 55, 45, 22]
 
-console.log(sumofodds(testArr))
+randStr = "raaaandomStraadfadadfainAAng"
 
-
-
-function sum
+console.log(numOfApp(randStr))

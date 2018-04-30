@@ -11,7 +11,7 @@ for (i = 0, j = 0; i < a.length; i++) {
 }
 console.log(b)
 
-// second way how task-9 we can be done 
+// second way how task-9 (nine)  can be done 
 
 
 var a = [4, 6, 2, 8, 2, 2];

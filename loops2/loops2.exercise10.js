@@ -3,6 +3,19 @@ var b = [];
 var e = 78;
 var p = 3;
 
-for (i = 0; i < a.length; i++) {
-    if ()
+if (p > a.length) {
+    console.log("Error");
+} else {
+    for (var i = 0; i <= p; i++) {
+        if (i != p) {
+            b[i] = a[i];
+        } else {
+            b[i] = e;
+        }
+    }
+    for (i = p + 1, j = p; i <= a.length; i++, j++) {
+        b[i] = a[j]
+
+    }
+    console.log(b);
 }

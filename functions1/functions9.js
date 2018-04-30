@@ -1,15 +1,13 @@
-function sumofodds(arr) {
-    var sum = 0
+function odd(a) {
+    var sum = 0;
 
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 === 1) {
-            sum = sum + arr[i]
+    for (var i = 0; i < a.length; i++) {
+        if (a[i] % 2 === 1) {
+            sum = sum + a[i];
         }
     }
-
     return sum
-
 }
-testArr = [3, 4, 77, 100, 150, 9, 55, 45, 22]
+var b = [5, 10, 5, 10, 50, 55];
 
-console.log(sumofodds(testArr))
+console.log(odd(b));

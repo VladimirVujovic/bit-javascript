@@ -1,1 +1,3 @@
-var a = input"
+var input = "";
+
+var
