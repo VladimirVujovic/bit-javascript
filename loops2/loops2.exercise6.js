@@ -1,13 +1,18 @@
 var a = [2, 4, -2, 7, -2, 4, 2];
 var isSymmetric = true;
 
-for (i = 0, j = a.length - 1; i < a.length, j > 0; i++, j--) {
+for (i = 0, j = a.length - 1; i < a.length, j > 0; i++ , j--) {
     if (a[i] !== a[j]) {
         isSymmetric = false;
     }
 }
 
 console.log(isSymmetric);
+
+
+
+
+
 
 
 
