@@ -2,7 +2,7 @@
 
 var a = [3, 500, 12, 149, 53, 414, 1, 19];
 
-var minMax = function (a) {
+var minMax = function(a) {
     var min = a[0];
     var max = a[0];
     var i;
@@ -27,10 +27,6 @@ var minMax = function (a) {
     temp = a[positionmin];
     a[positionmin] = a[positionmax];
     a[positionmax] = temp;
-
-
-
-
     return a
 }
 console.log(minMax(a));

@@ -1,7 +1,7 @@
 "use strict";
 
 
-var sum = function () {
+var sum = function() {
     var i;
     var j;
     var sum = 0;
