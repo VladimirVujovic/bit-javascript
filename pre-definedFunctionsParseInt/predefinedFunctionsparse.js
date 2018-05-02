@@ -1,8 +1,8 @@
-var s = "235";
+var s = "235.5";
 
 var result;
 
-result = parseInt(s);
+result = parseFloat(s);
 
 console.log(result);
 

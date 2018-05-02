@@ -1,6 +1,10 @@
-var names = ["Micahel", "Anne", "Frank", "Joe", "John", "David", "Mark", "Bill"];
+"use strict"
 
+var names = ["Micahel", "Anne", "Frank", "Joe", "John", "David", "Mark", "Bill"];
 var grades = [50, 39, 63, 72, 99, 51, 83, 59];
+var i;
+var result;
+
 
 var correspodinggrade = function (names, grades) {
 
@@ -26,12 +30,21 @@ var correspodinggrade = function (names, grades) {
         else if (grades[i] < 100) {
             scores[i] = 10;
         }
-        return names[i] + 'aquared' + grades[i] + 'andearned' + scores[i];
+
+        console.log(names[i] + ' aquared ' + grades[i] + ' andearned ' + scores[i]);
+        //break ili return
 
     }
+
+    ////.... <--- break 
+
+    //return undefined;
 }
+
+
+///<-- return 
 result = correspodinggrade(names, grades);
-console.log(result);
+//console.log(result);
 
 
 

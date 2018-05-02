@@ -1,4 +1,8 @@
+"use strict";
+
 var f = [3, 500, -10, 149, 53, 414, 1, 19];
+var i;
+
 
 var addition = function (a) {
     for (i = 0; i < a.length; i++) {
