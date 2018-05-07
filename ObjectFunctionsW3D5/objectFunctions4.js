@@ -12,9 +12,10 @@ function CulinareRecipe(typeCousine, complexity, ingredients, time, preparing) {
   this.printIngredients = function() {
     console.log(this.ingredients);
 }
-  this.checkTimePrepare = function(){
+}  this.checkTimePrepare = function(){
         if(this.time < 15){
           console.log("Yes!")
+      
 }       else{
           console.log("No!")
         }
