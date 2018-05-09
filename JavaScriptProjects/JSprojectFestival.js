@@ -60,22 +60,15 @@
   }
 
   var drama = new Genre("drama");
-  //   console.log(drama.getData());
   var bone = new Movie("Bone", drama, "90");
   var cone = new Movie("Cone", drama, "90");
   var none = new Movie("None", drama, "90");
 
-  //   console.log(bone);
-  //   bone.
   var c = new Program("5/5/2005");
   c.addMovie(bone);
   c.addMovie(cone);
   c.addMovie(none);
   console.log(c.getDataProgram());
-  //   var d = bone.getData();
-  //   console.log(d);
-  //var d = new Festival("Exit", "10", "50");
-  //console.log(d);
 })();
 
 //   this.getDataProgram = function() {
