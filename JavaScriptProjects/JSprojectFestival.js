@@ -1,6 +1,16 @@
 "use strict";
 
 (function() {
+  function createMovie(title, lengthMovies, Genre_name) {
+    var genre = new Genre(Genre_name);
+    var movie = new Movie(title, genre, lengthMovies);
+    return movie;
+  }
+
+  function createProgram(date) {
+    return new Program(date);
+  }
+
   function Genre(name) {
     this.name = name;
 
@@ -57,18 +67,38 @@
     this.addProgram = function(program) {
       this.listPrograms.push(program);
     };
+    this.getDataFestival = function() {
+      return (
+        this.name +
+        " has " +
+        c.totalNumberMovies +
+        " movie titles  " +
+        c.getDataProgram()
+      );
+    };
   }
 
-  var drama = new Genre("drama");
-  var bone = new Movie("Bone", drama, "90");
-  var cone = new Movie("Cone", drama, "90");
-  var none = new Movie("None", drama, "90");
+  var action = new Genre("action");
+  var comedy = new Genre("comedy");
+
+  var cone = new Movie("Cone", action, "100");
+  var none = new Movie("Hangover", comedy, "110");
+
+  var bone = createMovie("Bone", "100 min", "drama");
+  console.log(bone);
+
+  var a = new Festival("weekend festival");
 
   var c = new Program("5/5/2005");
+
+  var d = createProgram("10/10/2010");
+  console.log(d);
   c.addMovie(bone);
   c.addMovie(cone);
   c.addMovie(none);
+
   console.log(c.getDataProgram());
+  console.log(a.getDataFestival());
 })();
 
 //   this.getDataProgram = function() {
