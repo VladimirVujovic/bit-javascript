@@ -38,4 +38,4 @@ recipe.printIngredients();
 
 var element = "babana";
 
-console.log(recipe);
+console.log(CulinareRecipe);

@@ -12,18 +12,19 @@
     if(category == undefined){
         this.category = "e"
     }
+  
     this.number = new Number(number);
     this.category = category.charAt(0).toLowerCase();
     this.getDataSeat = function() {
       return this.number + " , " + this.category;
     };
-  }
+  
   function Passenger() {
     this.person = new Person();
     this.seat = new Seat(); 
     this.getDataPassenger = function(){
         return seat.
-    }; 
+    }
   }
   function Flight(relation, date) {
     this.relation = relation;
