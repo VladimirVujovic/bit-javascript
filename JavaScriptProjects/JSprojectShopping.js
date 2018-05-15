@@ -36,3 +36,12 @@
   //vlada.addProduct(watermelon);
   console.log(banana, watermelon);
 })();
+
+var a = [1, 2, 3, "four"];
+a.pop(1);
+console.log(a);
+// "new"
+
+var a = [3, 5, 1, 9, 7, "test"];
+a.sort(); // [1, 3, 5, 7, 'test'];
+console.log(a);
