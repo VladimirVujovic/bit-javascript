@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+</head>
+
+<body>
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script> 
+
+        var h1 = $("<h1>");
+        h1.text("Gallery images");
+        $("body").append(h1).css({
+                "color": "white",
+                "background-color": "violet",
+        }
+        );
+
+
+
+        var link = ["https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg?auto=compress&cs=tinysrgb&h=350", "https://images.pexels.com/photos/236047/pexels-photo-236047.jpeg?auto=compress&cs=tinysrgb&h=350", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcqBmk3UfVBXT-mGpJrlZE3TwimwBULimlEwZHUxdKjNFeF8uRIw"]
+        for (var i = 0; i < link.length; i++) {
+                var img = $("<img>");
+                img.attr("src", link[i]);
+                $("body").append(img);
+                var w = parseInt(Math.random() * (800 - 400)) + 400;
+                img.css("width", w);
+
+        }
+
+
+
+
+
+
+</script>
+
+
+
+</html>

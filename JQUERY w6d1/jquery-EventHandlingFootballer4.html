@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+        <style>
+                html {
+                        height: 100%;
+
+                }
+
+                body {
+                        height: 100%;
+                        background-image: url(./field.png);
+                        background-size: cover;
+                        opacity: 1;
+                        background-repeat: no-repeat;
+                        background-position: right center;
+                        background-attachment: fixed;
+                }
+
+                img {
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        width: 200px;
+
+                }
+
+                button {
+                        background-color: red;
+                        color: white;
+                        position: absolute;
+                        bottom: 6px;
+                        right: 30px;
+
+                }
+        </style>
+</head>
+
+<body>
+
+
+
+        <img src="./player.png" alt="Player" class="player">
+
+
+        <button>Stop Moving</button>
+
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script>
+        // var img = document.querySelector("img");
+        // var body = document.querySelector("body");
+        // var button = document.querySelector("button");
+
+        // function moveImg(e) {
+        //         //kordinate 100 i 80 je da se kursor nalazi na sredini igraca
+        //         img.style.top = e.clientY - 100 + "px";
+        //         img.style.left = e.clientX - 80 + "px";
+        // }
+
+        // body.addEventListener("click", moveImg);
+        // button.addEventListener("click", stopMoving);
+
+        // function stopMoving() {
+        //         body.removeEventListener("click", moveImg);
+        // }
+        // //button.removeEventListener("click", moveImg);
+        // // stopMoving()
+
+
+        var img = $("img");
+        var body = $("body");
+        var button = $("button");
+
+        function moveImg(e) {
+                $('img').css('top', e.clientY - 100 + 'px');
+                $('img').css('left', e.clientX - 80 + 'px')
+        }
+
+        $("body").on("click", moveImg);
+        $("button").on("click", stopMoving);
+
+        function stopMoving() {
+                body.off('click');
+        }
+
+
+</script>
+
+
+</html>

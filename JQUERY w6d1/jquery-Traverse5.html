@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+                img {
+                        width: 33%;
+                        height: 350px;
+                }
+
+                .selected {
+                        border: 2px solid red;
+                }
+        </style>
+</head>
+
+<body>
+
+        <div>
+                <img src="https://thumbs-prod.si-cdn.com/1aYkS8dARZZQSJMpPIY6sFlMUls=/800x600/filters:no_upscale():focal(423x276:424x277)/https://public-media.smithsonianmag.com/filer/c6/3b/c63ba994-68b6-4052-84bd-fb9eddce7cba/istock-499925702.jpg"
+                        alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Lake_O_Hara_from_Yukness_Ledge_Alpine_Route.jpg/1200px-Lake_O_Hara_from_Yukness_Ledge_Alpine_Route.jpg"
+                        alt="">
+                <img src="https://www.outdooractive.com/img//800/24516005/.jpg" alt="">
+        </div>
+
+
+        <div>
+                <img src="https://thumbs-prod.si-cdn.com/1aYkS8dARZZQSJMpPIY6sFlMUls=/800x600/filters:no_upscale():focal(423x276:424x277)/https://public-media.smithsonianmag.com/filer/c6/3b/c63ba994-68b6-4052-84bd-fb9eddce7cba/istock-499925702.jpg"
+                        alt="">
+                <img src="http://krinkit.com/images/slike/863/lake.jpeg" alt="">
+                <img src="https://www.outdooractive.com/img//800/24516005/.jpg" alt="">
+
+        </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script> 
+
+        $('img:first').addClass('selected');
+
+        $('img').each(function (index, element) {
+
+                if ($(this).is('.selected')) {
+                        $(this).removeClass('selected');
+
+
+                }
+
+
+        })
+
+
+        var temp = $('img').parent().next().children()[1];
+        $(temp).addClass('selected');
+
+
+
+
+</script>
+
+</html>
