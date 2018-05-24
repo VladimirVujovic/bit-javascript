@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+                body {
+                        margin: 2% 20%;
+                }
+
+                input {
+                        vertical-align: top;
+                        width: 400px;
+                }
+
+                img {
+                        width: 600px;
+                }
+
+
+
+                #searchInput {
+                        width: 400px;
+                        height: 35px;
+                        border-radius: 10px;
+                        color: rgb(0, 0, 0);
+                        border: 2px solid black;
+                        padding: 2px 40px;
+
+
+                }
+
+                #button {
+                        width: 100px;
+                        height: 35px;
+                        border-radius: 15px;
+                        background-color: rgb(221, 133, 133);
+                        border: 2px solid rgb(0, 0, 0);
+                }
+        </style>
+
+</head>
+
+<body>
+
+        <nav>
+
+                <input type="search" placeholder="Search for user" id="searchInput">
+                <input type="button" value="Search" id="button">
+        </nav>
+
+        <div id="gallery"></div>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js " integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin=" anonymous "></script>
+
+        <script>
+
+                function printUsers() {
+
+                        var searchData = $('#searchInput').val();
+                        var apiUrl = "https://api.github.com/search/users?q=" + searchData;
+                        $.get(apiUrl).done(function (data) {
+                                console.log(data)
+
+                                for (var i = 0; i < 10; i++) {
+                                        var name = '';
+                                        var url = '';
+
+                                        name = data.items[i].login;
+                                        url = data.items[i].avatar_url;
+
+                                        var userInfo = '<div>';
+                                        userInfo += '<p>' + name + '</p>';
+                                        userInfo += '<img src="' + url + '">';
+                                        userInfo += '</div';
+
+                                        document.getElementById('gallery').innerHTML += userInfo;
+                                }
+
+                        }).fail(function (err) {
+                                console.log("greska");
+                        })
+
+                };
+
+                $('#button').on('click', function () {
+                        printUsers();
+                });
+
+                $('#searchInput').on('keydown', function (event) {
+                        if (event.keyCode === 13) {
+                                printUsers();
+                        }
+                });
+
+
+
+
+        </script>
+</body>
+
+</html>

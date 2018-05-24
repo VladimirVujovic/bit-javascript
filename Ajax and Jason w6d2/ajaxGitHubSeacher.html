@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+</head>
+
+<body>
+
+
+        <h1>GitHubSeacher</h1>
+        <input type="text" placeholder="Search for user" id="input">
+        <input type="button" value="SEARCH" id="button">
+
+</body>
+
+
+<script> 
+        $(document).ready(function () {
+
+                var button = $("#button");
+                var input = $('#input')
+
+                var request = function () {
+                        var input = $("#input").val();
+                        var request = $.get("https://api.github.com/search/users?q" + input);
+                        request.done(function (data) {
+                                console.log(data);
+                                for (var i = 0; i < 11; i++) {
+                                        var picture = data.items[i].avatar_url;
+                                        var name = data[i].login;
+                                        var div = ('<div><img class="img" src="' + picture + '"> <span>' + name + '</span></div>')
+                                        $('body').append(div);
+                                }
+
+
+                        })
+                }
+
+
+                button.addEventListener("click", function () {
+                        request();
+                });
+
+
+                input.addEventListener('keydown', function () {
+                        if ("keydown" == 13) {
+                                request();
+                        }
+                })
+
+        })
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</html>
