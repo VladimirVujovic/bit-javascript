@@ -155,7 +155,7 @@
 
   console.log (Program.prototype);
 
-  console.log (love.title.call (a, ''));
+  //console.log (love.title.call (a, ''));
   console.log (c.getDataProgram ());
   console.log (a.getDataFestival ());
 }) ();
