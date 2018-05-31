@@ -11,3 +11,17 @@ var dataMovie = (function () {
     loadShow: loadShow,
   };
 }) ();
+
+//preko fetch-a, local storage
+
+// export const loadData = () => {
+//   let api = 'http://api.tvmaze.com/shows';
+//   return fetch (api)
+//     .then (response => {
+//       return response.json ();
+//     })
+//     .then (response => {
+//       localStorage.setItem ('shows', JSON.stringify (response));
+//       return response;
+//     });
+// };

@@ -7,3 +7,7 @@ var Main = (function (ui, data) {
     ui.display (data);
   });
 }) (ui, dataMovie);
+
+// //preko fetch-a; local storage
+// import loadData from './dataMovie';
+// import display from './uiMovie';

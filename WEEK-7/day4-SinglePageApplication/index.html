@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+                * {
+                        margin: 0;
+                }
+
+                #header {
+                        background-color: rgb(175, 125, 125);
+                        height: 100px;
+                }
+
+                #navigation {
+                        color: white;
+                        float: right;
+                        margin: 20px 40px 20px 0px;
+                }
+
+                input {
+                        height: 50px;
+                        width: 80px;
+                        color: white;
+                        background-color: black;
+                        border-radius: 15px;
+
+                }
+
+                .template {
+                        display: none;
+                }
+
+                #app .template {
+                        display: block;
+                }
+        </style>
+</head>
+
+<body>
+        <header id="header">
+                <div id="navigation">
+
+                        <input type="button" onclick="click" value="ABOUT" id="about">
+                        <input type="button" value="HOME" id="home">
+
+                </div>
+        </header>
+        <div id="app"></div>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="./singlePageApp.js"></script>
+
+
+<div class='template'>
+        <h1>PICASSO</h1>
+        <img src="https://www.telegraph.co.uk/content/dam/luxury/2018/03/05/Lot-7-Pablo-Picasso_trans_NvBQzQNjv4BqGuA9eGIfqop_MVWPxTukY_nlcj6MN3V9O8XUQMTlGAg.jpg?imwidth=450"
+                alt="">
+
+</div>
+
+</html>
